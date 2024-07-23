@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('conductors', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('cedula');
+            $table->string('url_file_cedula')->nullable();
+            $table->string('licencia');
+            $table->string('url_file_licencia')->nullable();
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('cuenta_bancarias', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('propietario_id')->references('id')->on('propietarios')->onDelete('cascade');
+            $table->string('cuenta_bancaria');
+            $table->string('banco');
             $table->timestamps();
         });
     }

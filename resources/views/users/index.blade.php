@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    Gestión de Usuarios
+@endsection
 @section('banner-inicio')
 <div class="iq-navbar-header" style="height: 215px;">
     <div class="container-fluid iq-container">
@@ -39,6 +42,7 @@
                                 <th width="5%" >N°</th>
                                 <th>Usuario</th>
                                 <th>Correo</th>
+                                <th>Teléfono</th>
                                 <th width="10%" >Acciones</th>
                             </tr>
                         </thead>
@@ -48,6 +52,7 @@
                                 <td class="text-center">{{ $loop->iteration }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->email }}</td>
+                                <td>{{ $item->phone }}</td>
                                 <td>
                                     <div class="flex align-items-center list-user-action">
                                         <a href="{{ route('user.edit', $item->id) }}" class="btn btn-sm btn-icon btn-warning"

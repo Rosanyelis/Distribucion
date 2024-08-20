@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('cedula');
-            $table->string('url_file_cedula')->nullable();
             $table->string('licencia');
-            $table->string('url_file_licencia')->nullable();
+            $table->date('fecha_ingreso');
+            $table->date('fecha_salida')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

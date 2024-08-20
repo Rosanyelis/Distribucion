@@ -11,27 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vehiculos', function (Blueprint $table) {
+        Schema::create('semi_remolques', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tracto_camion_id')->references('id')->on('tracto_camions')->onDelete('cascade');
             $table->string('placa');
+            $table->string('chasis');
+            $table->string('serie');
+            $table->string('anio');
             $table->string('color');
             $table->string('marca');
-            $table->string('tipo_vehiculo');
-            $table->string('modelo')->nullable();
-            $table->string('anio');
-            $table->string('chasis');
-            $table->string('motor')->nullable();
-            $table->string('ejes');
-            $table->string('serie')->nullable();
-            $table->string('cilindraje')->nullable();
-            $table->string('asientos')->nullable();
-            $table->string('capacidad_arrastre')->nullable();
-            $table->string('traccion')->nullable();
-            $table->string('transmision')->nullable();
             $table->string('tipo_carroceria')->nullable();
+            $table->string('ejes');
             $table->string('capacidad_total')->nullable();
             $table->string('capacidad_compartimiento1')->nullable();
             $table->string('capacidad_compartimiento2')->nullable();
+            $table->date('fechai_tarjeta_operacion')->nullable();
+            $table->date('fechaf_tarjeta_operacion')->nullable();
             $table->timestamps();
         });
     }
@@ -41,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vehiculos');
+        Schema::dropIfExists('semi_remolques');
     }
 };

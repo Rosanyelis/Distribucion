@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('propietarios', function (Blueprint $table) {
+        Schema::create('propietario_tracto_camions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('cedula');
-            $table->string('nit');
-            $table->date('fecha_nacimiento');
-            $table->string('name_ruat')->nullable();
-            $table->string('ci_ruat')->nullable();
-            $table->softDeletes();
+            $table->foreignId('propietario_id')->references('id')->on('propietarios')->onDelete('cascade');
+            $table->foreignId('tracto_camion_id')->references('id')->on('tracto_camions')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('propietarios');
+        Schema::dropIfExists('propietario_tracto_camions');
     }
 };

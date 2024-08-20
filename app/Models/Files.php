@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Conductor extends Model
+class Files extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
     protected $guarded = [];
 
-    public function files()
+    public function propietario()
     {
-        return $this->hasMany(Files::class, 'conductor_id', 'id');
+        return $this->belongsTo(Propietario::class);
     }
 }

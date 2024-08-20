@@ -3,13 +3,10 @@
     <div class="container-fluid navbar-inner">
         <a href="#" class="navbar-brand">
             <!--Logo start-->
-            <svg width="30" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-            </svg>
+            <img src="{{ asset('../../assets/images/transworld.png') }}" class="img-fluid"
+            width="50%" alt="" >
             <!--logo End-->
-            <h4 class="logo-title">Gimnasio</h4>
+            <!-- <h4 class="logo-title">SIS-PETROL</h4> -->
         </a>
         <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
             <i class="icon">
@@ -82,7 +79,15 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        <li>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                    Cerrar Sesión
+                                </a>
+                            </form>
+                        </li>
                     </ul>
                 </li>
             </ul>

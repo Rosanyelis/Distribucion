@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Gimnasio</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('../../assets/images/favicon.ico') }}" />
@@ -40,11 +40,10 @@
                             <div class="card card-transparent shadow-none d-flex justify-content-center mb-0 auth-card">
                                 <div class="card-body">
                                     <a href="{{ route('login') }}"
-                                        class="navbar-brand d-flex align-items-center mb-3">
+                                        class="navbar-brand text-center mb-3">
                                         <!--Logo start-->
-                                        <svg width="46px" height="46px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#314ac6"><path d="M15 7C16.1046 7 17 6.10457 17 5C17 3.89543 16.1046 3 15 3C13.8954 3 13 3.89543 13 5C13 6.10457 13.8954 7 15 7Z" stroke="#314ac6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.6133 8.26691L9.30505 12.4021L13.4403 16.5374L11.3727 21.0861" stroke="#314ac6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6.4104 9.5075L9.79728 6.19931L12.6132 8.26692L15.508 11.5752H19.2297" stroke="#314ac6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.89152 15.7103L7.65095 16.5374H4.34277" stroke="#314ac6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        <img src="{{ asset('../../assets/images/transworld.png') }}" class="img-fluid" width="100%" alt="">
                                         <!--logo End-->
-                                        <h4 class="logo-title ms-3">Gimnasio</h4>
                                     </a>
                                     <h2 class="mb-2 text-center">Iniciar Sesión</h2>
                                     <form method="POST" action="{{ route('login') }}">
@@ -108,7 +107,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
-                    <img src="{{ asset('../../assets/images/auth/login.png') }}" class="img-fluid gradient-main animated-scaleX"
+                    <img src="{{ asset('../../assets/images/auth/login.jpg') }}" class="img-fluid gradient-main animated-scaleX"
                         alt="images">
                 </div>
             </div>

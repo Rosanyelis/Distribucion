@@ -33,7 +33,7 @@
                            </svg>
                         </div>
                         <div class="progress-detail">
-                           <p  class="mb-2">Total de Clientes</p>
+                           <p  class="mb-2">Total de Conductores</p>
                            <h4 class="counter">50</h4>
                         </div>
                      </div>
@@ -48,7 +48,7 @@
                            </svg>
                         </div>
                         <div class="progress-detail">
-                           <p  class="mb-2">Total de Productos</p>
+                           <p  class="mb-2">Total de Vehìculos</p>
                            <h4 class="counter">10</h4>
                         </div>
                      </div>

@@ -46,6 +46,16 @@
                                 @endif
                             </div>
                             <div class="form-group col-md-6">
+                                <label class="form-label" for="phone">Teléfono:</label>
+                                <input type="text" class="form-control" name="phone" id="phone"
+                                    value="{{ old('phone') }}" placeholder="Ejem: Carol Mendez">
+                                @if ($errors->has('phone'))
+                                    <span class="text-danger">
+                                        <small><em>{{ $errors->first('phone') }}</em></small>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group col-md-6">
                                 <label class="form-label" for="email">Correo Electrónico:</label>
                                 <input type="text" class="form-control" name="email" id="email"
                                     value="{{ old('email') }}" placeholder="Ejem: example@example.com">

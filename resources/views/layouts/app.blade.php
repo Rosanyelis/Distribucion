@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Titulo -->
-        <title>{{ config('app.name', 'GMC') }}</title>
+        <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
         <!-- Favicon -->
         <link rel="shortcut icon" href="{{ asset('../assets/images/favicon.ico') }}" />
         <!-- Library / Plugin Css Build -->

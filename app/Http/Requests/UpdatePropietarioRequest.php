@@ -11,7 +11,7 @@ class UpdatePropietarioRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,26 @@ class UpdatePropietarioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name'              => ['required'],
+            'cedula'            => ['required'],
+            'nit'               => ['required'],
+            'fecha_nacimiento'  => ['required'],
+            'url_file_nit'      => ['mimes:pdf', 'max:2048'],
+            'url_file_cedula'   => ['mimes:pdf', 'max:2048'],
+            'url_file_licencia' => ['mimes:pdf', 'max:2048'],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'El campo Nombre Completo es requerido',
+            'cedula.required' => 'El campo Cedula es requerido',
+            'nit.required' => 'El campo NIT es requerido',
+            'fecha_nacimiento.required' => 'El campo Fecha de Nacimiento es requerido',
+            'url_file_nit.mimes' => 'El archivo debe ser un pdf',
+            'url_file_cedula.mimes' => 'El archivo debe ser un pdf',
+            'url_file_licencia.mimes' => 'El archivo debe ser un pdf',
         ];
     }
 }

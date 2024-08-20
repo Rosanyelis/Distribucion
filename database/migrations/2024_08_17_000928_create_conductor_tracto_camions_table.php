@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vehiculo_conductors', function (Blueprint $table) {
+        Schema::create('conductor_tracto_camions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('vehiculo_id')->references('id')->on('vehiculos')->onDelete('cascade');
             $table->foreignId('conductor_id')->references('id')->on('conductors')->onDelete('cascade');
-            $table->date('fecha_ingreso');
-            $table->date('fecha_salida')->nullable();
+            $table->foreignId('tracto_camion_id')->references('id')->on('tracto_camions')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vehiculo_conductors');
+        Schema::dropIfExists('conductor_tracto_camions');
     }
 };

@@ -81,6 +81,7 @@
         <script src="{{ asset('../assets/vendor/aos/dist/aos.js') }}"></script>
         <!-- App Script -->
         <script src="{{ asset('../assets/js/hope-ui.js') }}" defer></script>
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
         <script>
             const Toast = Swal.mixin({

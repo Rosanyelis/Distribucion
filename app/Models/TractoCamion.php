@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
@@ -27,11 +28,9 @@ class TractoCamion extends Model
         return $this->hasMany(Files::class, 'tracto_camion_id', 'id');
     }
 
-    public function propietarios(): MorphToMany
+    public function propietario(): BelongsTo
     {
-        return $this->morphToMany(Propietario::class, 'PropietarioTractoCamion');
+        return $this->belongsTo(Propietario::class, 'propietario_id', 'id');
     }
-
-
 
 }

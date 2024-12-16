@@ -129,12 +129,77 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link @if (Route::currentRouteName() == 'entrega.index' || Route::currentRouteName() == 'entrega.create'
+                                            || Route::currentRouteName() == 'entrega.edit' || Route::currentRouteName() == 'entrega.show') active @endif"
+                        aria-current="page" href="{{ route('entrega.index') }}">
+                        <i class="icon">
+                        <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.47 2 12 2C17.52 2 22 6.48 22 12C22 17.53 17.52 22 12 22C6.47 22 2 17.53 2 12ZM14.23 13.83L15.85 8.71C15.96 8.36 15.64 8.03 15.29 8.14L10.17 9.74C9.96 9.81 9.79 9.97 9.73 10.18L8.13 15.31C8.02 15.65 8.35 15.98 8.69 15.87L13.79 14.27C14 14.21 14.17 14.04 14.23 13.83Z" fill="currentColor"></path>
+                        </svg>
+                        </i>
+                        <span class="item-name">Distribuciones</span>
+                    </a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link @if (Route::currentRouteName() == 'reportes.index') active @endif"
+                        aria-current="page" href="{{ route('reportes.index') }}">
+                        <i class="icon">
+                        <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.47 2 12 2C17.52 2 22 6.48 22 12C22 17.53 17.52 22 12 22C6.47 22 2 17.53 2 12ZM14.23 13.83L15.85 8.71C15.96 8.36 15.64 8.03 15.29 8.14L10.17 9.74C9.96 9.81 9.79 9.97 9.73 10.18L8.13 15.31C8.02 15.65 8.35 15.98 8.69 15.87L13.79 14.27C14 14.21 14.17 14.04 14.23 13.83Z" fill="currentColor"></path>
+                        </svg>
+                        </i>
+                        <span class="item-name">Reportes</span>
+                    </a>
+                </li>
 
                 <li class="nav-item static-item">
                     <a class="nav-link static-item disabled" href="#" tabindex="-1">
                         <span class="default-icon">Configuraciones</span>
                         <span class="mini-icon">-</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link
+                        @if (Route::currentRouteName() == 'product.index' || Route::currentRouteName() == 'product.create'
+                            || Route::currentRouteName() == 'product.edit') active
+                        @endif"
+                        aria-current="page" href="{{ route('product.index') }}">
+                        <i class="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6308 13.131C16.5743 13.189 16.3609 13.437 16.1622 13.641C14.9971 14.924 11.9576 17.024 10.3668 17.665C10.1252 17.768 9.51437 17.986 9.18802 18C8.8753 18 8.5772 17.928 8.29274 17.782C7.93814 17.578 7.65368 17.257 7.49781 16.878C7.39747 16.615 7.2416 15.828 7.2416 15.814C7.08573 14.953 7 13.554 7 12.008C7 10.535 7.08573 9.193 7.21335 8.319C7.22796 8.305 7.38383 7.327 7.55431 6.992C7.86702 6.38 8.47784 6 9.13151 6H9.18802C9.61374 6.015 10.509 6.395 10.509 6.409C12.0141 7.051 14.9834 9.048 16.1768 10.375C16.1768 10.375 16.5129 10.716 16.659 10.929C16.887 11.235 17 11.614 17 11.993C17 12.416 16.8724 12.81 16.6308 13.131Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span class="item-name">Combustibles</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link
+                    @if (Route::currentRouteName() == 'conciliacion.index'
+                        || Route::currentRouteName() == 'conciliacion.create'
+                        || Route::currentRouteName() == 'conciliacion.edit') active @endif"
+                        aria-current="page" href="{{ route('conciliacion.index') }}">
+                        <i class="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6308 13.131C16.5743 13.189 16.3609 13.437 16.1622 13.641C14.9971 14.924 11.9576 17.024 10.3668 17.665C10.1252 17.768 9.51437 17.986 9.18802 18C8.8753 18 8.5772 17.928 8.29274 17.782C7.93814 17.578 7.65368 17.257 7.49781 16.878C7.39747 16.615 7.2416 15.828 7.2416 15.814C7.08573 14.953 7 13.554 7 12.008C7 10.535 7.08573 9.193 7.21335 8.319C7.22796 8.305 7.38383 7.327 7.55431 6.992C7.86702 6.38 8.47784 6 9.13151 6H9.18802C9.61374 6.015 10.509 6.395 10.509 6.409C12.0141 7.051 14.9834 9.048 16.1768 10.375C16.1768 10.375 16.5129 10.716 16.659 10.929C16.887 11.235 17 11.614 17 11.993C17 12.416 16.8724 12.81 16.6308 13.131Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span class="item-name">Código de Conciliaciones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link
+                    @if (Route::currentRouteName() == 'tramo.index'
+                        || Route::currentRouteName() == 'tramo.create'
+                        || Route::currentRouteName() == 'tramo.edit') active @endif"
+                        aria-current="page" href="{{ route('tramo.index') }}">
+                        <i class="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6308 13.131C16.5743 13.189 16.3609 13.437 16.1622 13.641C14.9971 14.924 11.9576 17.024 10.3668 17.665C10.1252 17.768 9.51437 17.986 9.18802 18C8.8753 18 8.5772 17.928 8.29274 17.782C7.93814 17.578 7.65368 17.257 7.49781 16.878C7.39747 16.615 7.2416 15.828 7.2416 15.814C7.08573 14.953 7 13.554 7 12.008C7 10.535 7.08573 9.193 7.21335 8.319C7.22796 8.305 7.38383 7.327 7.55431 6.992C7.86702 6.38 8.47784 6 9.13151 6H9.18802C9.61374 6.015 10.509 6.395 10.509 6.409C12.0141 7.051 14.9834 9.048 16.1768 10.375C16.1768 10.375 16.5129 10.716 16.659 10.929C16.887 11.235 17 11.614 17 11.993C17 12.416 16.8724 12.81 16.6308 13.131Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span class="item-name">Tramos</span>
                     </a>
                 </li>
                 <li class="nav-item">

@@ -26,8 +26,13 @@ class Propietario extends Model
         return $this->hasMany(CuentaBancaria::class, 'propietario_id', 'id');
     }
 
-    public function tractocamions(): MorphToMany
+    public function tractocamions(): HasMany
     {
-        return $this->morphToMany(TractoCamion::class, 'PropietarioTractoCamion');
+        return $this->HasMany(TractoCamion::class, 'propietario_id', 'id');
+    }
+
+    public function entregas(): HasMany
+    {
+        return $this->hasMany(Entrega::class, 'propietario_id', 'id');
     }
 }
